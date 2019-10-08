@@ -6,6 +6,8 @@ const line = require("@line/bot-sdk");
 const express = require("express");
 const app = express();
 
+//isi ini di .env
+//
 const config = {
   channelAccessToken: process.env.CHANNEL_ACCESS_TOKEN,
   channelSecret: process.env.CHANNEL_SECRET
@@ -23,11 +25,15 @@ app.post('/callback', line.middleware(config), (req, res) => {
 })
 
 function handleEvent(event){
+  //cek inputtan user itu typenya harus message dan text
   if (event.type !== 'message' || event.message.type !== 'text'){
     return Promise.resolve(null);
   }
   
   let text = event.message.text;
+  
+  //api line, cek 
+  //https://developers.line.biz/en/reference/messaging-api/
   client.replyMessage(event.replyToken, {
     type: 'text',
     text: text
