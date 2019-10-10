@@ -1,27 +1,24 @@
-Welcome to Glitch
-=================
+# echo-bot
 
-Click `Show` in the header to see your app live. Updates to your code will instantly deploy and update live.
+A simple LINE Messenger bot made with NodeJS
 
-**Glitch** is the friendly community where you'll build the app of your dreams. Glitch lets you instantly create, remix, edit, and host an app, bot or site, and you can invite collaborators or helpers to simultaneously edit code with you.
+## Getting Started
 
-Find out more [about Glitch](https://glitch.com/about).
+### Install
 
+Install LINE official sdk for nodeJS using [npm](https://www.npmjs.com/):
 
-Your Project
-------------
+``` bash
+$ npm install express
+$ npm install @line/bot-sdk
+```
 
-On the front-end,
-- edit `public/client.js`, `public/style.css` and `views/index.html`
-- drag in `assets`, like images or music, to add them to your project
+### Documentation
 
-On the back-end,
-- your app starts at `server.js`
-- add frameworks and packages in `package.json`
-- safely store app secrets in `.env` (nobody can see this but you and people you invite)
+See LINE official sdk [documentation](https://line.github.io/line-bot-sdk-nodejs/).
 
+## How To Use
 
-Made by [Glitch](https://glitch.com/)
--------------------
+Make the .env according to .env.example
 
-\ ゜o゜)ノ
+* fill channel access token and channel secret according to line developer page
